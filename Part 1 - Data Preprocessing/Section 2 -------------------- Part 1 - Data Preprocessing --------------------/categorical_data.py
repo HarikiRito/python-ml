@@ -11,6 +11,7 @@ dataset = pd.read_csv('Data_Refactor.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 3].values
 
+
 # Taking care of missing data
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
