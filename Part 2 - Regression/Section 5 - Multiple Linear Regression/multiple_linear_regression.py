@@ -53,6 +53,10 @@ regressor_OLS = sm.OLS(endog=y, exog=X_opt).fit()
 X_opt = X[:, [0, 3, 5]]
 regressor_OLS = sm.OLS(endog=y, exog=X_opt).fit()
 
+# Because this model have the adjust R square value smaller than
+# the model above (which mean this model is getting worse).
+# So that we take the model above (X[:, [0, 3, 5]]) even this model have a pvalues more than 0.05
+# (0.06)
 X_opt = X[:, [0, 3]]
 regressor_OLS = sm.OLS(endog=y, exog=X_opt).fit()
 print(1)
